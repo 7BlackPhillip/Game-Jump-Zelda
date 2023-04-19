@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(244, 225, 157);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.hero {
+    width: 170px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.score {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    top: 30px;
+    left: 8%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+}
+
+.clouds {
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    animation: clouds-animation 10s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -60px;
+    }
+
+    to {
+        right: 100%
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
