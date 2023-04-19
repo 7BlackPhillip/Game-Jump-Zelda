@@ -1,5 +1,5 @@
 const hero = document.querySelector('.hero');
-const pipe = document.querySelector('.pipe');
+const tree = document.querySelector('.tree');
 const score = document.querySelector('.score')
 const clouds = document.querySelector('.clouds');
 
@@ -17,7 +17,7 @@ const jump = () => {
 
 const loop = setInterval(() => {
 
-    const pipePosition = pipe.offsetLeft;
+    const treePosition = tree.offsetLeft;
 
     // "+" antes da função, para tornar o retorno de string em um valor numérico
     const heroPosition = +window.getComputedStyle(hero).bottom.replace('px', '');
@@ -29,10 +29,10 @@ const loop = setInterval(() => {
 
     //console.log(loop);
 
-    if (pipePosition <= 120 && pipePosition >0 && heroPosition < 85) {
+    if (treePosition <= 120 && treePosition >0 && heroPosition < 85) {
 
-        pipe.style.animation = 'none';
-        pipe.style.left = `${pipePosition}px`
+        tree.style.animation = 'none';
+        tree.style.left = `${treePosition}px`
 
         hero.style.animation = 'none';
         hero.style.bottom = `${heroPosition}px`

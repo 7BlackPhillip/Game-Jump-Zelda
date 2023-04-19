@@ -14,11 +14,11 @@
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
-.pipe {
+.tree {
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 1.5s infinite linear;
+    animation: tree-animation 1.5s infinite linear;
 }
 
 .hero {
@@ -54,7 +54,7 @@
     animation: clouds-animation 10s infinite linear;
 }
 
-@keyframes pipe-animation {
+@keyframes tree-animation {
     from {
         right: -60px;
     }
